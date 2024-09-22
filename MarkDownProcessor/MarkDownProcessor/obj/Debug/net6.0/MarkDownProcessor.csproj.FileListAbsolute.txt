@@ -1,0 +1,11 @@
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\bin\Debug\net6.0\MarkDownProcessor.deps.json
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\bin\Debug\net6.0\MarkDownProcessor.dll
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\bin\Debug\net6.0\MarkDownProcessor.pdb
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\obj\Debug\net6.0\MarkDownProcessor.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\obj\Debug\net6.0\MarkDownProcessor.AssemblyInfoInputs.cache
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\obj\Debug\net6.0\MarkDownProcessor.AssemblyInfo.cs
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\obj\Debug\net6.0\MarkDownProcessor.csproj.CoreCompileInputs.cache
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\obj\Debug\net6.0\MarkDownProcessor.dll
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\obj\Debug\net6.0\refint\MarkDownProcessor.dll
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\obj\Debug\net6.0\MarkDownProcessor.pdb
+C:\Users\dimas\RiderProjects\MarkDownProcessor\MarkDownProcessor\obj\Debug\net6.0\ref\MarkDownProcessor.dll

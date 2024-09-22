@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "HoOxiGTkGs7z//ea1TcwTBglJMNFHbgyu2hua7rmJZU50ztmrtX5nw6IujTvkWDGuUFjHtyYpec4bwZ1NjdOhQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dimas\\RiderProjects\\MarkDownProcessor\\MarkDownProcessor\\MarkDownProcessor.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dimas\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.29\\microsoft.netcore.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.29\\microsoft.windowsdesktop.app.ref.6.0.29.nupkg.sha512",
+    "C:\\Users\\dimas\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.29\\microsoft.aspnetcore.app.ref.6.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}
