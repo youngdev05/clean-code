@@ -3,15 +3,15 @@ using Markdown.Enums;
 
 namespace Markdown.Classes.Tags;
 
-public class Bold : TagToken
+public class Paragraph : TagToken
 {
-    public override string HtmlTag => "strong";
-    public override string MarkdownTag => "__";
-    public override TagType Type => TagType.Bold;
+    public override string HtmlTag => "p";
+    public override string MarkdownTag => "paragraph";
+    public override TagType Type => TagType.Paragraph;
     public override TagPosition Position { get; set; }
     public override TagToken? Pair { get; set; }
 
-    public override object Clone() => new Bold()
+    public override object Clone() => new Paragraph()
     {
         Pair = (TagToken?)Pair?.Clone(),
     };
