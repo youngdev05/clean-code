@@ -3,5 +3,5 @@
 public class PermissionDto
 {
     public int UserId { get; set; }
-    public string PermissionType { get; set; } // 'Editor' или 'Viewer'
+    public string PermissionType { get; set; } 
 }
