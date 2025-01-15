@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WebApplication.Core.Models;
-using File = WebApplication.Core.Models.File;
+using WebApi.Core.Models;
+using File = WebApi.Core.Models.File;
 
-namespace WebApplication.Persistence;
+namespace WebApi.Persistence;
 
 public class AppDbContext : DbContext
 {

@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace WebApplication.Persistence.Infrastructure;
+namespace WebApi.Persistence.Infrastructure;
 
 public static class ServiceExtensions
 {

@@ -1,4 +1,4 @@
-﻿namespace WebApplication.Core.Models;
+﻿namespace WebApi.Core.Models;
 
 public class User
 {
@@ -6,6 +6,6 @@ public class User
     public string Username { get; set; }
     public string Email { get; set; }
     public string PasswordHash { get; set; }
-    public string Role { get; set; } = "Viewer"; // Admin, Editor, Viewer
+    public string Role { get; set; } = "Viewer"; 
     public List<FilePermission> Permissions { get; set; } = new();
 }

@@ -1,4 +1,5 @@
-﻿namespace WebApplication.Core.Models;
+﻿namespace WebApi.Core.Models;
+
 
 public class File
 {
