@@ -17,10 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="frontend\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Include="wwwroot\api.js" />
       <None Include="wwwroot\index.html" />
       <None Include="wwwroot\login.html" />

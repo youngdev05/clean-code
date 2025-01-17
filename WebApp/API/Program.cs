@@ -60,14 +60,11 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Используем аутентификацию
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseDefaultFiles();  
+app.UseStaticFiles();   
 app.UseSwagger();
 app.UseSwaggerUI();
-
 app.MapControllers();
-app.UseDefaultFiles();  // Ищет index.html
-app.UseStaticFiles();   // Раздаёт статику (CSS, JS)
 app.Run();
