@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Markdown Editor</h1>
+    <button id="logout">Выйти</button>
+</header>
+
+<main>
+    <div class="editor-container">
+        <textarea id="markdownInput" placeholder="Введите Markdown..."></textarea>
+        <div id="htmlOutput"></div>
+    </div>
+    <button id="downloadFile">⬇ Скачать</button>
+    <button id="shareFile">🔗 Назначить доступ</button>
+    <button id="saveFile">💾 Сохранить</button>
+</main>
+
+<script src="script.js"></script>
+<script src="api.js"></script>
+</body>
+</html>
