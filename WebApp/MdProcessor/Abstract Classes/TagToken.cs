@@ -12,4 +12,6 @@ public abstract class TagToken : Token, ICloneable
         
         
     public abstract object Clone();
+    
+    
 }

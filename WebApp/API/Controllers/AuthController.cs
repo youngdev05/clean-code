@@ -12,10 +12,10 @@ namespace API.Controllers;
 [Route("api/auth")]
 public class AuthController : ControllerBase
 {
-    private readonly AppDbContext _context;
+    private readonly AddDbContext _context;
     private readonly JwtService _jwtService;
 
-    public AuthController(AppDbContext context, JwtService jwtService)
+    public AuthController(AddDbContext context, JwtService jwtService)
     {
         _context = context;
         _jwtService = jwtService;

@@ -7,19 +7,18 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4"/>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.4" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\Core\Core.csproj" />
       <ProjectReference Include="..\Persistence\Persistence.csproj" />
+      <ProjectReference Include="..\MdProcessor\MdProcessor.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="wwwroot\api.js" />
       <None Include="wwwroot\index.html" />
-      <None Include="wwwroot\login.html" />
       <None Include="wwwroot\script.js" />
       <None Include="wwwroot\styles.css" />
     </ItemGroup>

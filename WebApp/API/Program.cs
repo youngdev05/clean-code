@@ -4,6 +4,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Core.Services;
 using Persistence.Extensions;
+using Microsoft.EntityFrameworkCore;
+using Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +17,10 @@ builder.Services.AddControllers();
 // Настройка JWT
 var jwtSecret = builder.Configuration["Jwt:Secret"];
 var key = Encoding.UTF8.GetBytes(jwtSecret);
+
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+builder.Services.AddDbContext<AddDbContext>(options =>
+    options.UseNpgsql(connectionString));
 
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
     .AddJwtBearer(options =>
@@ -60,11 +66,23 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-app.UseAuthentication();
-app.UseAuthorization();
-app.UseDefaultFiles();  
-app.UseStaticFiles();   
-app.UseSwagger();
-app.UseSwaggerUI();
+// Используем аутентификацию
+// app.UseAuthentication();
+// app.UseAuthorization();
+
+// Раздаём фронтенд
+app.UseDefaultFiles();  // Ищет index.html
+app.UseStaticFiles();   // Раздаёт статику (CSS, JS)
+
+// Swagger только если в режиме разработки
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+// Перенаправляем на фронт, если запрашивают корневой URL
 app.MapControllers();
+app.MapFallbackToFile("index.html"); // <-- Это перенаправит всех на index.html
+
 app.Run();

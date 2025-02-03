@@ -1,36 +1,54 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Markdown Editor</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Документы</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
 <header>
-    <h1>Markdown Editor</h1>
-    <button id="logout">Выйти</button>
+    <nav>
+        <!-- Добавил контейнер для кнопок авторизации -->
+        <div class="auth-buttons">
+            <button id="register" onclick="showRegistrationForm()">Зарегистрироваться</button>
+            <button id="login" onclick="showLoginForm()">Войти</button>
+        </div>
+    </nav>
 </header>
 
 <main>
-    <div class="editor-container">
-        <textarea id="markdownInput" placeholder="Введите Markdown..."></textarea>
-        <div id="htmlOutput"></div>
+    <div class="container">
+        <!-- Добавил секцию для управления документами -->
+        <section class="document-controls">
+            <div class="button-row">
+                <button id="new-document-button" onclick="showCreateDocumentForm()">Новый документ</button>
+                <button id="my-documents-btn" onclick="showPersonalDocuments()">Мои документы</button>
+                <button id="available-documents-btn" onclick="showAvailableDocuments()">Доступные документы</button>
+            </div>
+        </section>
+
+        <!-- Добавил секцию для отображения документов -->
+        <section class="document-list">
+            <div class="scroll-row">
+                <div class="scroll-container" id="personal-documents">
+                    <h2>Мои документы</h2>
+                    <!-- Карточки документов будут добавляться динамически -->
+                </div>
+                <div class="scroll-container" id="available-documents">
+                    <h2>Доступные документы</h2>
+                    <!-- Карточки документов будут добавляться динамически -->
+                </div>
+            </div>
+        </section>
     </div>
-    <button id="downloadFile">⬇ Скачать</button>
-    <button id="shareFile">🔗 Назначить доступ</button>
-    <button id="saveFile">💾 Сохранить</button>
 </main>
 
-<section>
-    <h2>📂 Ваши файлы</h2>
-    <div id="fileList"></div>
-</section>
+<!-- Добавил футер для дополнительной информации -->
+<footer>
+    <p>&copy; 2023 Документы. Все права защищены.</p>
+</footer>
 
-
-<script src="script.js"></script>
-<script src="api.js"></script>
+<script src="/script.js"></script>
 </body>
 </html>

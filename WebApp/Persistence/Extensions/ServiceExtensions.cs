@@ -9,7 +9,7 @@ public static class ServiceExtensions
     public static void ConfigureDatabase(this IServiceCollection services, IConfiguration config)
     {
         var connectionString = config.GetConnectionString("DefaultConnection");
-        services.AddDbContext<AppDbContext>(options =>
+        services.AddDbContext<AddDbContext>(options =>
             options.UseNpgsql(connectionString)); 
     }
 }

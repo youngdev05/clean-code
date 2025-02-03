@@ -4,9 +4,10 @@ using File = Core.Models.File;
 
 namespace Persistence;
 
-public class AppDbContext : DbContext
+public class AddDbContext : DbContext
 {
-    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
+    public AddDbContext(DbContextOptions<AddDbContext> options) 
+        : base(options) { }
 
     public DbSet<User> Users { get; set; }
     public DbSet<File> Files { get; set; }
@@ -24,6 +25,6 @@ public class AppDbContext : DbContext
 
         modelBuilder.Entity<FilePermission>()
             .HasIndex(fp => new { fp.FileId, fp.UserId })
-            .IsUnique(); // Один юзер - одна роль для одного файла
+            .IsUnique();
     }
 }

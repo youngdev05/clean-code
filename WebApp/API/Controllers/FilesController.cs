@@ -1,5 +1,7 @@
 ﻿using System.Security.Claims;
 using API.DTOs;
+using Markdown.Classes;
+using MdProcessor.Classes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,12 +11,12 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("api/files")]
-    [Authorize]
+    //[Authorize]
     public class FilesController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly AddDbContext _context;
 
-        public FilesController(AppDbContext context)
+        public FilesController(AddDbContext context)
         {
             _context = context;
         }
@@ -100,6 +102,18 @@ namespace API.Controllers
             return Ok(new { message = "Файл обновлён" });
         }
 
+        [HttpPost("convert")]
+        public IActionResult ConvertMarkdown([FromBody] string markdown)
+        {
+            var parser = new MarkdownParser();
+            var tokens = parser.Parse(markdown);
+
+            // Допустим, у тебя есть резолвер токенов в HTML
+            var html = new TokenResolver().ResolveTokens(tokens); 
+
+            return Ok(new { html });
+        }
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteFile(int id)
         {

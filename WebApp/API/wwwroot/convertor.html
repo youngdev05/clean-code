@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- Изменил lang на "ru", так как интерфейс на русском -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер Markdown</title> <!-- Более понятное название -->
+    <link rel="stylesheet" href="/convertor.css">
+</head>
+<body>
+<header>
+    <!-- Добавил логотип или заголовок для навигации -->
+    <h1>Конвертер Markdown</h1>
+    <nav>
+        <button onclick="window.location.href='/Page'" class="nav-button">Главное меню</button>
+    </nav>
+</header>
+
+<main>
+    <section class="converter-section">
+        <div class="form-container">
+            <!-- Добавил подсказку для пользователя -->
+            <p>Введите текст в формате Markdown, и он будет преобразован в HTML.</p>
+            <div class="text-container">
+                <textarea id="input-text-field" placeholder="Введите Markdown текст..."></textarea>
+                <div id="output-text-field" class="output-field"></div>
+            </div>
+            <div class="buttons-container">
+                <button id="convert-button" class="action-button">Конвертировать</button>
+                <button id="save-button" class="action-button blue-button">Сохранить</button>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <!-- Добавил футер для дополнительной информации -->
+    <p>&copy; 2025 Конвертер Markdown. Все права защищены.</p>
+</footer>
+
+<script src="/script.js"></script>
+</body>
+</html>

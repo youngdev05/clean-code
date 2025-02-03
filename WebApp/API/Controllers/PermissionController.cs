@@ -10,12 +10,12 @@ namespace API.Controllers
 {
     [ApiController]
     [Route("api/files/{fileId}/permissions")]
-    [Authorize]
+    //[Authorize]
     public class PermissionsController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly AddDbContext _context;
 
-        public PermissionsController(AppDbContext context)
+        public PermissionsController(AddDbContext context)
         {
             _context = context;
         }
